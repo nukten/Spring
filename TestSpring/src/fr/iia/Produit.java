@@ -34,7 +34,7 @@ public class Produit {
 	private Fournisseur fournisseur;
 	
 	
-	@ManyToMany(mappedBy="produit")
+	@ManyToMany(mappedBy="produits")
 	private List<Client> clients;
 	
 	

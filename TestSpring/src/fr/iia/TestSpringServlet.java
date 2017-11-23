@@ -31,9 +31,9 @@ public class TestSpringServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
 		
-		Guitariste guitariste = (Guitariste) context.getBean("guitariste");
+		//Guitariste guitariste = (Guitariste) context.getBean("guitariste");
 		
-		System.out.println(guitariste);
+		//System.out.println(guitariste);
 	}
 
 	/**

@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 @Entity
 @DiscriminatorValue("2")
 
-public class Fournisseur {
+public class Fournisseur extends Personne{
 	@Column(name="FOU_SOCIETE")
 	private String nomSociete;
 
