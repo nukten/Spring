@@ -6,7 +6,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 @Repository
+@Transactional
 public class DAOProduit implements IDAO<Produit>
 {
 
@@ -31,7 +33,14 @@ public class DAOProduit implements IDAO<Produit>
 	@Override
 	public boolean delete(Produit object) {
 		// TODO Auto-generated method stub
-		return false;
+		try{
+			em.remove(em.merge(object));
+			return true;
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
 	}
 	
 	

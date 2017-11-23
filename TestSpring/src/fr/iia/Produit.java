@@ -36,6 +36,26 @@ public class Produit {
 	
 	@ManyToMany(mappedBy="produits")
 	private List<Client> clients;
+
+
+	public String getNom() {
+		return nom;
+	}
+
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+
+	public Double getPrix() {
+		return prix;
+	}
+
+
+	public void setPrix(Double prix) {
+		this.prix = prix;
+	}
 	
 	
 	

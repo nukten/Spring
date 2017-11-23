@@ -13,7 +13,7 @@
 		<property name="instrument" ref="guitare" />
 	</bean-->
 	
-	<context:component-scan base-package="fr.iia.dao"></context:component-scan>
+	<context:component-scan base-package="fr.iia"></context:component-scan>
 	
 	<!-- On crée le DataSource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
@@ -44,6 +44,7 @@
 	<!-- On crée le transactionManager pour JPA avec entityManagerFactory -->
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
+		
 	</bean>
 	
 	<!-- On active les annotations @Transactional avec transactionManager -->
